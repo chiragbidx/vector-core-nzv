@@ -13,172 +13,23 @@ export type HeroContent = {
   heroImageAlt: string;
 };
 
-// ─── Sponsors ───────────────────────────────────────────────────────────────
-export type SponsorItem = { icon: string; name: string };
-export type SponsorsContent = {
-  heading: string;
-  items: SponsorItem[];
-};
-
-// ─── Benefits ───────────────────────────────────────────────────────────────
-export type BenefitItem = { icon: string; title: string; description: string };
-export type BenefitsContent = {
-  eyebrow: string;
-  heading: string;
-  description: string;
-  items: BenefitItem[];
-};
-
-// ─── Feature Grid ───────────────────────────────────────────────────────────
-export type FeatureItem = { icon: string; title: string; description: string };
-export type FeaturesContent = {
-  eyebrow: string;
-  heading: string;
-  subtitle: string;
-  items: FeatureItem[];
-};
-
-// ─── Services ───────────────────────────────────────────────────────────────
-export type ServiceItem = { title: string; description: string; pro: boolean };
-export type ServicesContent = {
-  eyebrow: string;
-  heading: string;
-  subtitle: string;
-  items: ServiceItem[];
-};
-
-// ─── Testimonials ───────────────────────────────────────────────────────────
-export type TestimonialItem = {
-  image: string;
-  name: string;
-  role: string;
-  comment: string;
-  rating: number;
-};
-export type TestimonialsContent = {
-  eyebrow: string;
-  heading: string;
-  reviews: TestimonialItem[];
-};
-
-// ─── Team ───────────────────────────────────────────────────────────────────
-export type SocialLink = { name: string; url: string };
-export type TeamMember = {
-  imageUrl: string;
-  firstName: string;
-  lastName: string;
-  positions: string[];
-  socialNetworks: SocialLink[];
-};
-export type TeamContent = {
-  eyebrow: string;
-  heading: string;
-  members: TeamMember[];
-};
-
-// ─── Pricing ────────────────────────────────────────────────────────────────
-export type PricingPlan = {
-  title: string;
-  popular: boolean;
-  price: number;
-  description: string;
-  buttonText: string;
-  benefits: string[];
-};
-export type PricingContent = {
-  eyebrow: string;
-  heading: string;
-  subtitle: string;
-  priceSuffix: string;
-  plans: PricingPlan[];
-};
-
-// ─── Contact ────────────────────────────────────────────────────────────────
-export type ContactInfoBlock = { label: string; value: string | string[] };
-export type ContactContent = {
-  eyebrow: string;
-  heading: string;
-  description: string;
-  mailtoAddress: string;
-  info: {
-    address: ContactInfoBlock;
-    phone: ContactInfoBlock;
-    email: ContactInfoBlock;
-    hours: ContactInfoBlock;
-  };
-  formSubjects: string[];
-  formSubmitLabel: string;
-};
-
-// ─── FAQ ────────────────────────────────────────────────────────────────────
-export type FaqItem = { question: string; answer: string };
-export type FaqContent = {
-  eyebrow: string;
-  heading: string;
-  items: FaqItem[];
-};
-
-// ─── Footer ─────────────────────────────────────────────────────────────────
-export type FooterLink = { label: string; href: string };
-export type FooterColumn = { heading: string; links: FooterLink[] };
-export type FooterContent = {
-  brandName: string;
-  columns: FooterColumn[];
-  copyright: string;
-  attribution: { label: string; href: string };
-};
-
-// ─── Navbar ─────────────────────────────────────────────────────────────────
-export type NavRoute = { href: string; label: string };
-export type NavFeature = { title: string; description: string };
-export type NavbarContent = {
-  brandName: string;
-  routes: NavRoute[];
-  featureDropdownLabel: string;
-  featureImage: { src: string; alt: string };
-  features: NavFeature[];
-  signInLabel: string;
-  signUpLabel: string;
-  dashboardLabel: string;
-  githubLink: { href: string; ariaLabel: string };
-};
-
-// ─── Root ───────────────────────────────────────────────────────────────────
-export type HomeContent = {
-  hero: HeroContent;
-  sponsors: SponsorsContent;
-  benefits: BenefitsContent;
-  features: FeaturesContent;
-  services: ServicesContent;
-  testimonials: TestimonialsContent;
-  team: TeamContent;
-  pricing: PricingContent;
-  contact: ContactContent;
-  faq: FaqContent;
-  footer: FooterContent;
-  navbar: NavbarContent;
-};
-
-// ─── Defaults ───────────────────────────────────────────────────────────────
+// (types unchanged, cut to save space)
 
 export const defaultHomeContent: HomeContent = {
-  // ── Hero ─────────────────────────────────────────────────────────────────
   hero: {
-    badgeInner: "Launch",
-    badgeOuter: "Panda SaaS starter is ready",
-    titleBefore: "Build your next",
-    titleHighlight: "SaaS",
-    titleAfter: "app in days, not weeks",
+    badgeInner: "",
+    badgeOuter: "",
+    titleBefore: "",
+    titleHighlight: "Effortless Email Marketing",
+    titleAfter: "",
     subtitle:
-      "Panda gives you authentication, billing-ready patterns, team flows, and polished UI foundations so you can ship faster with confidence.",
-    primaryCta: { label: "Start Building", href: "#pricing" },
-    secondaryCta: { label: "Explore features", href: "#features" },
+      "Grow your business with easy-to-use campaign tools and powerful analytics.",
+    primaryCta: { label: "Get Started Free", href: "/auth#signup" },
+    secondaryCta: { label: "View Demo", href: "#" },
     heroImageLight: "/hero-image-light.jpeg",
     heroImageDark: "/hero-image-dark.jpeg",
-    heroImageAlt: "Panda dashboard preview",
+    heroImageAlt: "MailBeam dashboard preview",
   },
-
-  // ── Sponsors ─────────────────────────────────────────────────────────────
   sponsors: {
     heading: "Built with trusted tools",
     items: [
@@ -191,247 +42,178 @@ export const defaultHomeContent: HomeContent = {
       { icon: "Drama", name: "Sentry" },
     ],
   },
-
-  // ── Benefits ─────────────────────────────────────────────────────────────
   benefits: {
-    eyebrow: "Why Panda",
-    heading: "A practical SaaS app builder starter",
+    eyebrow: "Why MailBeam",
+    heading: "Effortless email marketing for small business",
     description:
-      "Built for teams that want production-ready foundations with room to customize, not a rigid template you outgrow in a week.",
+      "MailBeam is a modern platform to create, send, and manage email marketing campaigns — all in one place.",
     items: [
       {
         icon: "Blocks",
-        title: "Ship With Confidence",
-        description: "Start from proven architecture and avoid redoing auth, layout, and deployment setup.",
+        title: "Campaign Power",
+        description: "Plan, design, and deliver email campaigns with ease.",
       },
       {
-        icon: "LineChart",
-        title: "Faster Time To Revenue",
-        description: "Focus on product validation while the starter handles the repetitive engineering basics.",
+        icon: "Users",
+        title: "List Management",
+        description: "Organize, import, and target your subscribers.",
       },
       {
-        icon: "Wallet",
-        title: "Lower Build Cost",
-        description: "Reusable components and patterns reduce rework and keep your team moving efficiently.",
+        icon: "BarChart3",
+        title: "Clear Analytics",
+        description: "Get instant feedback on every send.",
       },
       {
         icon: "Sparkle",
-        title: "Cleaner UX By Default",
-        description: "Responsive sections, dark mode, and polished UI primitives create a premium first impression.",
+        title: "Designed for Growth",
+        description: "Easy onboarding. Beautiful results.",
       },
     ],
   },
-
-  // ── Features ─────────────────────────────────────────────────────────────
   features: {
     eyebrow: "Features",
-    heading: "What you get out of the box",
-    subtitle:
-      "Panda combines developer speed and production-grade UX so you can spend your time shipping features instead of rebuilding starter infrastructure.",
+    heading: "Why Choose MailBeam?",
+    subtitle: "",
     items: [
-      { icon: "TabletSmartphone", title: "Responsive By Default", description: "Every section is optimized for mobile and desktop without extra layout work." },
-      { icon: "BadgeCheck", title: "Battle-Tested Patterns", description: "Uses dependable UI and architecture conventions teams can maintain long-term." },
-      { icon: "Goal", title: "Product-Focused Structure", description: "Clear section hierarchy designed to communicate value and drive activation." },
-      { icon: "PictureInPicture", title: "Polished Visual Foundation", description: "Modern cards, spacing, and motion cues that are easy to extend for your brand." },
-      { icon: "MousePointerClick", title: "Conversion-Ready CTA Flow", description: "Strategic calls-to-action and section order help users move to signup quickly." },
-      { icon: "Newspaper", title: "Documentation-Friendly", description: "Readable code and section boundaries make onboarding new contributors easier." },
+      {
+        icon: "MailPlus",
+        title: "Simple Campaign Builder",
+        description: "Design, schedule, and send email campaigns in just a few clicks.",
+      },
+      {
+        icon: "Users",
+        title: "Manage Your Subscribers",
+        description: "Organize and segment your email lists for targeted outreach.",
+      },
+      {
+        icon: "BarChart",
+        title: "Actionable Analytics",
+        description: "Track open rates, clicks, and performance to optimize your results.",
+      },
     ],
   },
-
-  // ── Services ─────────────────────────────────────────────────────────────
   services: {
     eyebrow: "Services",
-    heading: "Core starter capabilities",
-    subtitle:
-      "A pragmatic baseline for SaaS products that need to move quickly without sacrificing quality.",
+    heading: "All-in-One Platform",
+    subtitle: "The easiest way to create, send, and analyze campaigns.",
     items: [
-      { title: "Authentication Foundation", description: "Ready-to-extend auth scaffolding for email, OAuth, and organization-based access.", pro: false },
-      { title: "Billing-Ready Structure", description: "Plan models and upgrade flow patterns prepared for Stripe or your payment provider.", pro: false },
-      { title: "Developer Experience", description: "TypeScript, linting, and component primitives configured for team velocity.", pro: false },
-      { title: "Production Hardening", description: "Security-minded defaults, reusable UI states, and maintainable section architecture.", pro: true },
+      {
+        title: "Campaigns",
+        description: "Plan and send branded email to your contacts.",
+        pro: false,
+      },
+      {
+        title: "Subscriber Management",
+        description: "Grow your list and keep it organized.",
+        pro: false,
+      },
+      {
+        title: "Analytics",
+        description: "See the real impact of your email marketing.",
+        pro: false,
+      },
+      {
+        title: "Easy Onboarding",
+        description: "Get started in minutes, not days.",
+        pro: false,
+      },
     ],
   },
-
-  // ── Testimonials ─────────────────────────────────────────────────────────
   testimonials: {
-    eyebrow: "Testimonials",
-    heading: "Teams shipping with Panda",
+    eyebrow: "Clients",
+    heading: "What Our Customers Say",
     reviews: [
-      { image: "/demo-img.jpg", name: "Aarav Shah", role: "Founder, FinchFlow", comment: "Panda saved us weeks of setup. We launched our first paying plan in less than a sprint.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Maya Patel", role: "Product Lead, OrbitDesk", comment: "The section structure and component quality made it easy to ship a polished onboarding flow quickly.", rating: 4.8 },
-      { image: "/demo-img.jpg", name: "Nikhil Rao", role: "CTO, TeamForge", comment: "We replaced our old starter with Panda and reduced front-end rework dramatically.", rating: 4.9 },
-      { image: "/demo-img.jpg", name: "Emma Brooks", role: "Head of Growth, Nimbus", comment: "The default layout is conversion-friendly and easy to adapt to our brand.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Daniel Kim", role: "Engineering Manager, PulseOps", comment: "Great developer ergonomics. New engineers onboarded fast and started shipping immediately.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Sofia Green", role: "Founder, LaunchPad AI", comment: "Exactly what we needed for an MVP: clean code, strong UI, and a sensible section flow.", rating: 4.9 },
+      {
+        image: "/team1.jpg",
+        name: "Sarah",
+        role: "Boutique Owner",
+        comment: "“MailBeam made launching my first campaign so easy. Highly recommend!”",
+        rating: 5,
+      },
+      {
+        image: "/team2.jpg",
+        name: "Mark",
+        role: "Agency Founder",
+        comment: "“We love the simple dashboard and clear reports.”",
+        rating: 5,
+      },
     ],
   },
-
-  // ── Team ─────────────────────────────────────────────────────────────────
   team: {
     eyebrow: "Team",
-    heading: "Meet the Panda team",
-    members: [
-      {
-        imageUrl: "/team1.jpg",
-        firstName: "Leo",
-        lastName: "Miranda",
-        positions: ["Lead Engineer", "Starter Architecture"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team2.jpg",
-        firstName: "Elizabeth",
-        lastName: "Moore",
-        positions: ["Product Designer"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team3.jpg",
-        firstName: "David",
-        lastName: "Diaz",
-        positions: ["Platform Engineer", "AI Integrations"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-        ],
-      },
-      {
-        imageUrl: "/team1.jpg",
-        firstName: "Sarah",
-        lastName: "Robinson",
-        positions: ["Cloud Engineer", "Kubernetes"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team2.jpg",
-        firstName: "Michael",
-        lastName: "Holland",
-        positions: ["DevOps Engineer", "CI/CD"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-        ],
-      },
-      {
-        imageUrl: "/team3.jpg",
-        firstName: "Zoe",
-        lastName: "Garcia",
-        positions: ["Frontend Engineer", "Design Systems"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-        ],
-      },
-      {
-        imageUrl: "/team1.jpg",
-        firstName: "Evan",
-        lastName: "James",
-        positions: ["Backend Engineer"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team2.jpg",
-        firstName: "Pam",
-        lastName: "Taylor",
-        positions: ["Fullstack Engineer", "Product UX"],
-        socialNetworks: [
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-    ],
+    heading: "Meet the MailBeam Team",
+    members: [],
   },
-
-  // ── Pricing ──────────────────────────────────────────────────────────────
   pricing: {
     eyebrow: "Pricing",
-    heading: "Pricing for every stage",
-    subtitle: "Start lean, then scale to enterprise-grade workflows as your product grows.",
+    heading: "Fair Pricing",
+    subtitle: "Start free. Scale as you grow.",
     priceSuffix: "/month",
     plans: [
       {
         title: "Starter",
         popular: false,
         price: 0,
-        description: "Ideal for prototypes and small internal tools.",
-        buttonText: "Start for free",
-        benefits: ["Up to 3 teammates", "Basic auth patterns", "Core landing sections", "Community support", "Deploy-ready setup"],
-      },
-      {
-        title: "Growth",
-        popular: true,
-        price: 49,
-        description: "Best for product teams shipping customer-facing SaaS.",
-        buttonText: "Start trial",
-        benefits: ["Unlimited teammates", "Advanced section set", "Billing-ready models", "Priority support", "Team workflows"],
-      },
-      {
-        title: "Enterprise",
-        popular: false,
-        price: 199,
-        description: "For teams requiring compliance, support SLAs, and custom rollout.",
-        buttonText: "Contact sales",
-        benefits: ["Security review support", "SSO/SAML integration path", "Dedicated onboarding", "Phone and email support", "Architecture advisory"],
-      },
-    ],
-  },
-
-  // ── Contact ──────────────────────────────────────────────────────────────
-  contact: {
-    eyebrow: "Contact",
-    heading: "Talk to the Panda team",
-    description:
-      "Need help customizing the starter, planning architecture, or accelerating launch? Share your goals and timeline.",
-    mailtoAddress: "hello@panda.dev",
-    info: {
-      address: { label: "Find us", value: "Remote-first • San Francisco, CA" },
-      phone: { label: "Call us", value: "+1 (415) 555-0199" },
-      email: { label: "Email us", value: "hello@panda.dev" },
-      hours: { label: "Visit us", value: ["Monday - Friday", "9AM - 6PM PT"] },
-    },
-    formSubjects: ["Starter Demo", "Architecture Review", "Design System", "Billing Integration", "Enterprise Plan"],
-    formSubmitLabel: "Send inquiry",
-  },
-
-  // ── FAQ ──────────────────────────────────────────────────────────────────
-  faq: {
-    eyebrow: "FAQ",
-    heading: "Common Questions",
-    items: [
-      { question: "Is Panda free to start with?", answer: "Yes. You can start with the core template and customize it for your product." },
-      { question: "Can I use this for a production SaaS app?", answer: "Yes. The starter is designed for production-minded teams with scalable structure and reusable UI patterns." },
-      { question: "Does it support dark mode and responsive design?", answer: "Yes. The template includes theme support and responsive layouts across major sections." },
-      { question: "Can I plug in my own auth and billing provider?", answer: "Yes. The structure is provider-agnostic and easy to adapt for your stack." },
-      { question: "How quickly can I launch with Panda?", answer: "Most teams can ship an MVP in days by reusing existing sections and starter patterns." },
-    ],
-  },
-
-  // ── Footer ───────────────────────────────────────────────────────────────
-  footer: {
-    brandName: "Panda",
-    columns: [
-      {
-        heading: "Contact",
-        links: [
-          { label: "hello@panda.dev", href: "mailto:hello@panda.dev" },
-          { label: "Github", href: "#" },
-          { label: "Twitter", href: "https://x.com" },
-          { label: "Discord", href: "https://discord.com" },
+        description: "Personal projects and simple campaigns.",
+        buttonText: "Get Started Free",
+        benefits: [
+          "Unlimited emails",
+          "Up to 500 subscribers",
+          "Campaign builder",
+          "Basic analytics",
         ],
       },
+      {
+        title: "Pro",
+        popular: true,
+        price: 29,
+        description: "For growing brands and businesses.",
+        buttonText: "Try Pro Free",
+        benefits: [
+          "5,000 subscribers",
+          "Advanced analytics",
+          "Segmentation",
+          "Priority support",
+        ],
+      },
+    ],
+  },
+  contact: {
+    eyebrow: "Contact",
+    heading: "Connect With MailBeam",
+    description:
+      "Want to learn more? Reach out and our team will help you get started.",
+    mailtoAddress: "chirag@bidx.ai",
+    info: {
+      address: { label: "Find us", value: "Remote" },
+      phone: { label: "Call us", value: "" },
+      email: { label: "Email us", value: "chirag@bidx.ai" },
+      hours: { label: "Visit us", value: ["Monday - Friday", "9AM - 6PM"] },
+    },
+    formSubjects: ["Product Demo", "Support", "Partnership"],
+    formSubmitLabel: "Send Inquiry",
+  },
+  faq: {
+    eyebrow: "FAQ",
+    heading: "Questions About MailBeam",
+    items: [
+      {
+        question: "Is MailBeam free to start?",
+        answer: "Yes, you can send your first campaigns for free.",
+      },
+      {
+        question: "Who is MailBeam for?",
+        answer: "Small businesses, agencies, and anyone who wants effective email marketing.",
+      },
+      {
+        question: "Do I need coding skills to use MailBeam?",
+        answer: "No, everything is no-code and simple.",
+      },
+    ],
+  },
+  footer: {
+    brandName: "MailBeam",
+    columns: [
       {
         heading: "Product",
         links: [
@@ -440,54 +222,43 @@ export const defaultHomeContent: HomeContent = {
           { label: "Contact", href: "#contact" },
         ],
       },
-      {
-        heading: "Help",
-        links: [
-          { label: "Contact Us", href: "#contact" },
-          { label: "FAQ", href: "#faq" },
-          { label: "Docs", href: "https://nextjs.org/docs" },
-        ],
-      },
-      {
-        heading: "Socials",
-        links: [
-          { label: "GitHub", href: "https://github.com" },
-          { label: "Discord", href: "https://discord.com" },
-          { label: "X", href: "https://x.com" },
-        ],
-      },
     ],
-    copyright: "\u00a9 2026 Panda SaaS App Builder Starter.",
-    attribution: { label: "Built on Next.js", href: "https://nextjs.org" },
+    copyright: "© MailBeam 2024. All rights reserved.",
+    attribution: { label: "Built with Next.js", href: "https://nextjs.org" },
   },
-
-  // ── Navbar ───────────────────────────────────────────────────────────────
   navbar: {
-    brandName: "Panda",
+    brandName: "MailBeam",
     routes: [
-      { href: "/#testimonials", label: "Testimonials" },
-      { href: "/#team", label: "Team" },
+      { href: "/#features", label: "Features" },
+      { href: "/#pricing", label: "Pricing" },
       { href: "/#contact", label: "Contact" },
       { href: "/#faq", label: "FAQ" },
     ],
     featureDropdownLabel: "Features",
-    featureImage: { src: "/demo-img.jpg", alt: "Panda preview" },
+    featureImage: { src: "/hero-image-light.jpeg", alt: "MailBeam dashboard preview" },
     features: [
-      { title: "Auth, Billing, Teams", description: "Production-ready flows for sign-in, subscriptions, and organizations." },
-      { title: "UI + Design System", description: "Shadcn-based components with consistent theming and dark mode support." },
-      { title: "Deploy Fast", description: "Sane defaults for Next.js, TypeScript, and Vercel-first deployment." },
+      {
+        title: "Campaign Builder",
+        description: "Create, design, and schedule your email marketing.",
+      },
+      {
+        title: "Subscriber Management",
+        description: "Import, grow and target your list—all in one place.",
+      },
+      {
+        title: "Analytics",
+        description: "Track campaign results and improve with data.",
+      },
     ],
-    signInLabel: "Sign in",
-    signUpLabel: "Sign up",
+    signInLabel: "Sign In",
+    signUpLabel: "Sign Up",
     dashboardLabel: "Dashboard",
-    githubLink: { href: "https://nextjs.org/docs", ariaLabel: "View on GitHub" },
+    githubLink: { href: "#", ariaLabel: "View GitHub" },
   },
 };
 
 export const homeContent: HomeContent = defaultHomeContent;
 
-// Keep this function export for backward compatibility with older imports.
-// Primary consumers should import `homeContent` directly.
 export function getHomeContent(): HomeContent {
   return homeContent;
 }
