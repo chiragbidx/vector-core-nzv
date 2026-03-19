@@ -4,9 +4,10 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  ChevronDown,
+  BarChart3,
   Home,
-  Hammer,
+  ListChecks,
+  MailPlus,
   Settings,
   Users,
 } from "lucide-react";
@@ -25,14 +26,12 @@ type NavItem = {
 
 const sections: { title: string; items: NavItem[] }[] = [
   {
-    title: "Platform",
+    title: "MailBeam",
     items: [
-      { label: "Overview", href: "/dashboard", icon: Home },
-      {
-        label: "Feature",
-        href: "/dashboard/feature",
-        icon: Hammer,
-      },
+      { label: "Dashboard", href: "/dashboard", icon: Home },
+      { label: "Campaigns", href: "/dashboard/campaigns", icon: MailPlus },
+      { label: "Subscribers", href: "/dashboard/subscribers", icon: ListChecks },
+      { label: "Analytics", href: "/dashboard/analytics", icon: BarChart3 },
     ],
   },
   {
@@ -102,7 +101,7 @@ function NavSection({
     <Collapsible defaultOpen={defaultOpen}>
       <CollapsibleTrigger className="group flex w-full items-center justify-between px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground/70 hover:text-muted-foreground transition-colors">
         {title}
-        <ChevronDown className="size-3.5 transition-transform group-data-[state=closed]:-rotate-90" />
+        <span className="size-3.5 transition-transform group-data-[state=closed]:-rotate-90">&#9662;</span>
       </CollapsibleTrigger>
       <CollapsibleContent>
         <div className="mt-1 space-y-0.5">
